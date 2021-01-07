@@ -48,17 +48,94 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AddRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddRM.Designer.cs">
+      <DependentUpon>AddRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="CDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="CDetails.Designer.cs">
+      <DependentUpon>CDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHome.Designer.cs">
+      <DependentUpon>CHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLogin.Designer.cs">
+      <DependentUpon>CLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creg1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creg.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="name.cs" />
+    <Compile Include="RMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMaterials.Designer.cs">
+      <DependentUpon>RMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SHome.Designer.cs">
+      <DependentUpon>SHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRM.Designer.cs">
+      <DependentUpon>UpdateRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SLogin.Designer.cs">
+      <DependentUpon>SLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SReg.Designer.cs">
+      <DependentUpon>SReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shops.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shops.Designer.cs">
+      <DependentUpon>Shops.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,14 +145,32 @@
     <Compile Include="CReg.Designer.cs">
       <DependentUpon>CReg.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddRM.resx">
+      <DependentUpon>AddRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHome.resx">
+      <DependentUpon>CHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CReg.resx">
       <DependentUpon>CReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CLogin.resx">
+      <DependentUpon>CLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="RMaterials.resx">
+      <DependentUpon>RMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHome.resx">
+      <DependentUpon>SHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shops.resx">
+      <DependentUpon>Shops.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,8 +181,42 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SLogin.resx">
+      <DependentUpon>SLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SReg.resx">
+      <DependentUpon>SReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
+    </None>
+    <None Include="creg.xsc">
+      <DependentUpon>creg.xsd</DependentUpon>
+    </None>
+    <None Include="creg.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creg1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creg.xss">
+      <DependentUpon>creg.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

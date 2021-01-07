@@ -41,6 +41,7 @@ namespace oracledbms
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.confirm_password = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // button1
@@ -123,7 +124,7 @@ namespace oracledbms
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(288, 286);
+            this.linkLabel1.Location = new System.Drawing.Point(287, 302);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(188, 13);
             this.linkLabel1.TabIndex = 9;
@@ -149,11 +150,23 @@ namespace oracledbms
             this.label5.TabIndex = 11;
             this.label5.Text = "Confirm Password";
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(632, 9);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(156, 13);
+            this.linkLabel2.TabIndex = 12;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Start selling now! Register here.";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // CReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.confirm_password);
             this.Controls.Add(this.linkLabel1);
@@ -188,5 +201,6 @@ namespace oracledbms
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TextBox confirm_password;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

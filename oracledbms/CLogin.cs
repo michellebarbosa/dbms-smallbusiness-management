@@ -54,8 +54,10 @@ namespace oracledbms
                     if (data.Rows.Count == 1)
                     {
 
+                    globals.username = data.Rows[0]["username"].ToString();
+
                         this.Hide();
-                        Shops f4 = new Shops();
+                        CHome f4 = new CHome();
                         f4.ShowDialog();
                     }
 

@@ -12,18 +12,20 @@ using Oracle.ManagedDataAccess.Types;
 
 namespace oracledbms
 {
-    public partial class CReg : Form
+    public partial class SReg : Form
+
+
     {
+
+
         OracleConnection CON1;
         OracleCommand CMD;
         string QUERY;
         int TEMP, I;
         OracleDataReader RDR;
-
-        public CReg()
+        public SReg()
         {
             InitializeComponent();
-          
             CON1 = new OracleConnection("Data Source=(DESCRIPTION =" +
       "(ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-5IH3S49)(PORT = 1521))" +
       "(CONNECT_DATA =" +
@@ -31,18 +33,9 @@ namespace oracledbms
         "(SERVICE_NAME = XE)" +
       ")" +
     "); User Id=michelle; Password=Ilovescience08");
-
-
-       
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CReg_Load(object sender, EventArgs e)
+        private void SReg_Load(object sender, EventArgs e)
         {
 
         }
@@ -50,30 +43,31 @@ namespace oracledbms
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            CLogin f1 = new CLogin();
+            CReg f1 = new CReg();
             f1.ShowDialog();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            SReg f4 = new SReg();
-            f4.ShowDialog();
+            SLogin f1 = new SLogin();
+            f1.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (username.Text== " "|| email.Text==null || location.Text==null || password.Text== null)
+
+            if (sname.Text == " " || email.Text == " " || t_shop.Text == " " || password.Text == " ")
             {
                 MessageBox.Show("Enter All the Details ");
             }
-           
+
             else
-               if (password.Text == confirm_password.Text)
+               if (password.Text == re_password.Text)
             {
                 I = 0;
 
-                QUERY = "select * from creg where username='" + username.Text + "' ";
+                QUERY = "select * from sreg where sname='" + sname.Text + "' ";
                 CON1.Open();
                 CMD = new OracleCommand(QUERY, CON1);
 
@@ -81,7 +75,7 @@ namespace oracledbms
 
                 while (RDR.Read())
                 {
-                    if (RDR["username"] == username.Text)
+                    if (RDR["sname"] == sname.Text)
                         I = 1;
                     else
                         I = I;
@@ -91,14 +85,14 @@ namespace oracledbms
 
                 if (I == 1)
                 {
-                    MessageBox.Show(" username exists");
-                    username.Text = " ";
-                    username.Focus();
+                    MessageBox.Show(" Shop Name exists");
+                    sname.Text = " ";
+                    sname.Focus();
                 }
                 else
                 {
                     CON1.Open();
-                    QUERY = "Insert into creg(username,email,location,password) values('" + username.Text + "','" + email.Text + "','" + location.Text + "','" + password.Text + "')";
+                    QUERY = "Insert into sreg(sname,email,type_shop,password) values('" + sname.Text + "','" + email.Text + "','" + t_shop.Text + "','" + password.Text + "')";
                     CMD = new OracleCommand(QUERY, CON1);
                     CMD.CommandType = CommandType.Text;
                     TEMP = CMD.ExecuteNonQuery();
@@ -117,25 +111,21 @@ namespace oracledbms
             {
                 MessageBox.Show("PASSWORDS DO NOT MATCH");
                 password.Text = "";
-                confirm_password.Text = "";
+                re_password.Text = "";
                 password.Focus();
             }
 
-
-          
-              
-
-                void clear()
-                {
-                    username.Text = email.Text = location.Text = password.Text = " ";
-                }
-                void next()
-                {
-                    CLogin ss = new CLogin();
-                    ss.Show();
-                    this.Hide();
-                }
+            void clear()
+            {
+                sname.Text = email.Text = t_shop.Text = password.Text = " ";
             }
+            void next()
+            {
+                CLogin ss = new CLogin();
+                ss.Show();
+                this.Hide();
+            }
+
         }
     }
-
+}
