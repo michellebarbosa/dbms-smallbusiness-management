@@ -88,7 +88,7 @@ namespace oracledbms
                         //shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", con);
 
                     OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO materials ( pname,pprice,pquantity,sellername,contact,address) Values('" +
-                        shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", con);
+                        shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", CON1);
 
                    // adapter.ExecuteNonQuery();
                     CON1.Close();
