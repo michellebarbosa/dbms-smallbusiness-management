@@ -50,7 +50,7 @@ namespace oracledbms
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(200, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 36);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 78);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // button1

@@ -143,6 +143,7 @@ namespace oracledbms
             this.button2.TabIndex = 3;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // creg
             // 
@@ -175,8 +176,10 @@ namespace oracledbms
             this.dataGridView1.Location = new System.Drawing.Point(0, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 320);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellDoubleClick);
             // 
             // shopname
             // 
@@ -247,9 +250,9 @@ namespace oracledbms
         private DataSet dataSet;
         private System.Windows.Forms.BindingSource cREGBindingSource1;
         private DataSetTableAdapters.CREGTableAdapter cREGTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label shopname;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

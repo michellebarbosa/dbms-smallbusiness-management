@@ -82,6 +82,15 @@ namespace oracledbms
                     CMD = new OracleCommand(QUERY, CON1);
                     CMD.CommandType = CommandType.Text;
                     TEMP = CMD.ExecuteNonQuery();
+
+                 
+                    //OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO materials ( pname,pprice,pquantity,sellername,contact,address) Values('" +
+                        //shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", con);
+
+                   // adapter.ExecuteNonQuery();
+                    CON1.Close();
+                    CMD.CommandType = CommandType.Text;
+                    TEMP = CMD.ExecuteNonQuery();
                     if (TEMP > 0)
 
                         MessageBox.Show(" REGISTRATION SUCCESSFULL");

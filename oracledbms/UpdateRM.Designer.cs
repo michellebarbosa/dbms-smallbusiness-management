@@ -31,12 +31,6 @@ namespace oracledbms
         {
             this.label7 = new System.Windows.Forms.Label();
             this.shopn = new System.Windows.Forms.TextBox();
-            this.address = new System.Windows.Forms.TextBox();
-            this.contact = new System.Windows.Forms.TextBox();
-            this.sname = new System.Windows.Forms.TextBox();
-            this.quantity = new System.Windows.Forms.TextBox();
-            this.price = new System.Windows.Forms.TextBox();
-            this.pname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +41,11 @@ namespace oracledbms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label7
@@ -64,48 +63,6 @@ namespace oracledbms
             this.shopn.Name = "shopn";
             this.shopn.Size = new System.Drawing.Size(100, 20);
             this.shopn.TabIndex = 27;
-            // 
-            // address
-            // 
-            this.address.Location = new System.Drawing.Point(319, 284);
-            this.address.Name = "address";
-            this.address.Size = new System.Drawing.Size(100, 20);
-            this.address.TabIndex = 26;
-            // 
-            // contact
-            // 
-            this.contact.Location = new System.Drawing.Point(319, 258);
-            this.contact.Name = "contact";
-            this.contact.Size = new System.Drawing.Size(100, 20);
-            this.contact.TabIndex = 25;
-            // 
-            // sname
-            // 
-            this.sname.Location = new System.Drawing.Point(319, 232);
-            this.sname.Name = "sname";
-            this.sname.Size = new System.Drawing.Size(100, 20);
-            this.sname.TabIndex = 24;
-            // 
-            // quantity
-            // 
-            this.quantity.Location = new System.Drawing.Point(319, 206);
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(100, 20);
-            this.quantity.TabIndex = 23;
-            // 
-            // price
-            // 
-            this.price.Location = new System.Drawing.Point(319, 180);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(100, 20);
-            this.price.TabIndex = 22;
-            // 
-            // pname
-            // 
-            this.pname.Location = new System.Drawing.Point(319, 154);
-            this.pname.Name = "pname";
-            this.pname.Size = new System.Drawing.Size(100, 20);
-            this.pname.TabIndex = 21;
             // 
             // label6
             // 
@@ -169,6 +126,7 @@ namespace oracledbms
             this.button1.TabIndex = 29;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -188,28 +146,68 @@ namespace oracledbms
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 128);
+            this.textBox2.Location = new System.Drawing.Point(319, 151);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 33;
+            this.textBox2.TabIndex = 32;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(319, 180);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 33;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(319, 206);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 34;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(319, 232);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 35;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(319, 258);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 36;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(319, 287);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 37;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // UpdateRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.shopn);
-            this.Controls.Add(this.address);
-            this.Controls.Add(this.contact);
-            this.Controls.Add(this.sname);
-            this.Controls.Add(this.quantity);
-            this.Controls.Add(this.price);
-            this.Controls.Add(this.pname);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -218,6 +216,7 @@ namespace oracledbms
             this.Controls.Add(this.label1);
             this.Name = "UpdateRM";
             this.Text = "UpdateRM";
+            this.Load += new System.EventHandler(this.UpdateRM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,12 +226,6 @@ namespace oracledbms
 
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox shopn;
-        private System.Windows.Forms.TextBox address;
-        private System.Windows.Forms.TextBox contact;
-        private System.Windows.Forms.TextBox sname;
-        private System.Windows.Forms.TextBox quantity;
-        private System.Windows.Forms.TextBox price;
-        private System.Windows.Forms.TextBox pname;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -242,6 +235,11 @@ namespace oracledbms
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox7;
     }
 }

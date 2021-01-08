@@ -48,11 +48,6 @@ namespace oracledbms
         }
 
 
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -63,6 +58,23 @@ namespace oracledbms
         private void button3_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UpdateRM f4 = new UpdateRM();
+            f4.ShowDialog();
+        }
+
+        private void DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            this.Hide();
+            UpdateRM f4 = new UpdateRM();
+            f4.ShowDialog();
+
+
         }
     }
 }
