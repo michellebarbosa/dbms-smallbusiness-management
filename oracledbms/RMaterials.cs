@@ -21,43 +21,31 @@ namespace oracledbms
 
         private void RMaterials_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet.CREG' table. You can move, or remove it, as needed.
-            // this.cREGTableAdapter.Fill(this.dataSet.CREG);
-            try
-            {
-                string connstr = "Data Source=(DESCRIPTION =" +
-   "(ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-5IH3S49)(PORT = 1521))" +
-   "(CONNECT_DATA =" +
-     "(SERVER = DEDICATED)" +
-     "(SERVICE_NAME = XE)" +
-   ")" +
- "); User Id=michelle; Password=Ilovescience08";
+            string oradb = "Data Source=DESKTOP-5IH3S49 ;User Id=michelle ;Password=Ilovescience08;";
+            OracleConnection conn = new OracleConnection(oradb);  // C#
+            conn.Open();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            string query = "Select * From materials ";
+            OracleDataAdapter sda = new OracleDataAdapter(query, conn);
+            DataTable dt = new DataTable("materials");
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt.DefaultView;
 
-                using (OracleConnection conn = new OracleConnection("connstr"))
-                using (OracleCommand cmd = new OracleCommand("select * from resources", conn))
-                {
-                    conn.Open();
-                    using (OracleDataReader reader = cmd.ExecuteReader())
-                    {
-                        DataTable dataTable = new DataTable();
-                        dataTable.Load(reader);
-                        dataGridView1.DataSource = dataTable;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
-    }
 
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-    private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-    {
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddRM f4 = new AddRM();
+            f4.ShowDialog();
+        }
     }
-    
-    }
+}
 
