@@ -44,6 +44,7 @@ namespace oracledbms
             this.button1 = new System.Windows.Forms.Button();
             this.shopn = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.shopname = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -169,11 +170,20 @@ namespace oracledbms
             this.label7.TabIndex = 14;
             this.label7.Text = "Shop name";
             // 
+            // shopname
+            // 
+            this.shopname.AutoSize = true;
+            this.shopname.Location = new System.Drawing.Point(74, 23);
+            this.shopname.Name = "shopname";
+            this.shopname.Size = new System.Drawing.Size(0, 13);
+            this.shopname.TabIndex = 15;
+            // 
             // AddRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.shopname);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.shopn);
             this.Controls.Add(this.button1);
@@ -214,5 +224,6 @@ namespace oracledbms
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox shopn;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label shopname;
     }
 }

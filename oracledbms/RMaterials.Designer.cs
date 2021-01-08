@@ -44,6 +44,9 @@ namespace oracledbms
             this.cREGBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cREGTableAdapter = new oracledbms.DataSetTableAdapters.CREGTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.shopname = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.creg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cregBindingSource)).BeginInit();
@@ -56,6 +59,8 @@ namespace oracledbms
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.shopname);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.linkLabel5);
             this.panel1.Controls.Add(this.name);
@@ -122,7 +127,7 @@ namespace oracledbms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(223, 403);
+            this.button1.Location = new System.Drawing.Point(223, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -132,7 +137,7 @@ namespace oracledbms
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(414, 403);
+            this.button2.Location = new System.Drawing.Point(409, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -173,11 +178,42 @@ namespace oracledbms
             this.dataGridView1.Size = new System.Drawing.Size(800, 320);
             this.dataGridView1.TabIndex = 4;
             // 
+            // shopname
+            // 
+            this.shopname.AutoSize = true;
+            this.shopname.Location = new System.Drawing.Point(405, 25);
+            this.shopname.Name = "shopname";
+            this.shopname.Size = new System.Drawing.Size(56, 13);
+            this.shopname.TabIndex = 6;
+            this.shopname.Text = "shopname";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(385, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(173, 40);
+            this.textBox1.TabIndex = 5;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(318, 382);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Get Data";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // RMaterials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -212,5 +248,8 @@ namespace oracledbms
         private System.Windows.Forms.BindingSource cREGBindingSource1;
         private DataSetTableAdapters.CREGTableAdapter cREGTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label shopname;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

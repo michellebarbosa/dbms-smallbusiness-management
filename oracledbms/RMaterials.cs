@@ -15,22 +15,35 @@ namespace oracledbms
     public partial class RMaterials : Form
     {
         public RMaterials()
-        {
+        {         
             InitializeComponent();
         }
 
         private void RMaterials_Load(object sender, EventArgs e)
         {
+            textBox1.Text = globals.sname;
             string oradb = "Data Source=DESKTOP-5IH3S49 ;User Id=michelle ;Password=Ilovescience08;";
             OracleConnection conn = new OracleConnection(oradb);  // C#
             conn.Open();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            string query = "Select * From materials ";
+            //OracleDataAdapter sda = new OracleDataAdapter("select * from sreg where sname = @sname ", conn);
+            //sda.SelectCommand.Parameters.Add("@sname", sname.Text);
+
+            string query = "SELECT * FROM materials WHERE shopn='" + textBox1.Text + "'";
             OracleDataAdapter sda = new OracleDataAdapter(query, conn);
+
+
             DataTable dt = new DataTable("materials");
+
+
+
             sda.Fill(dt);
             dataGridView1.DataSource = dt.DefaultView;
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+
+
+
 
         }
 
@@ -45,6 +58,11 @@ namespace oracledbms
             this.Hide();
             AddRM f4 = new AddRM();
             f4.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

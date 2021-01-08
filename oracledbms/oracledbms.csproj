@@ -187,6 +187,9 @@
     <EmbeddedResource Include="SReg.resx">
       <DependentUpon>SReg.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRM.resx">
+      <DependentUpon>UpdateRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
