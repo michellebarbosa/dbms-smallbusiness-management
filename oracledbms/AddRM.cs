@@ -49,7 +49,7 @@ namespace oracledbms
                 if (shopn.Text != "" || pname.Text != "" || price.Text != "" || quantity.Text != "" || sname.Text != "" || contact.Text != "" || address.Text != "") //if not null areas is empty, there will be no action 
                 {
                  
-                    OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO book_table ( pname,pprice,pquantity,sellername,contact,address) Values('" +
+                    OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO materials ( pname,pprice,pquantity,sellername,contact,address) Values('" +
                         shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", con);
 
                    // adapter.ExecuteNonQuery();
