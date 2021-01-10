@@ -101,7 +101,7 @@ namespace oracledbms
                         MessageBox.Show(" REGISTRATION SUCCESSFULL");
                     else
                         MessageBox.Show("REGISTRATION FAILED");
-
+                    CON1.Close();
                     clear();
                     next();
                 }

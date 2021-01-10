@@ -42,6 +42,7 @@ namespace oracledbms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string oradb = "Data Source= DESKTOP-5IH3S49;User Id=michelle;Password=Ilovescience08;";
 
             if (shopn.Text == "" || pname.Text == "" || price.Text == "" || quantity.Text == "" || sname.Text == "" || contact.Text == "" || address.Text == "")
             {
@@ -49,60 +50,22 @@ namespace oracledbms
             }
 
             else
-              if (contact.Text != address.Text)
-            {
-                I = 0;
+             
+                    using (OracleConnection con = new OracleConnection(oradb))
+                    {
+                        con.Open();
+                        OracleCommand cmd = con.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "Insert INTO materials(pname, pprice, pquantity, sellername, contact, address, shopn) Values('" + pname.Text + "', '" + price.Text + "', '" + quantity.Text + "', '" + sname.Text + "', '" + contact.Text + "', '" + address.Text + "', '" + shopn.Text + "')";
+                        cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Updated.");
+                    SLogin ss = new SLogin();
+                    ss.Show();
+                    this.Hide();
 
-                QUERY = "select * from materials where shopn='" + shopn.Text + "' ";
-                CON1.Open();
-                CMD = new OracleCommand(QUERY, CON1);
-
-                RDR = CMD.ExecuteReader();
-
-                while (RDR.Read())
-                {
-                    if (RDR["shopn"] == shopn.Text)
-                        I = 1;
-                    else
-                        I = I;
                 }
-                RDR.Close();
-                CON1.Close();
-
-                if (I == 1)
-                {
-                    MessageBox.Show(" Shop Name exists");
-                    sname.Text = " ";
-                    sname.Focus();
-                }
-                else
-                {
-                 
-                    OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO book_table ( pname,pprice,pquantity,sellername,contact,address) Values('" +
-                        shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", con);
-
-                   // adapter.ExecuteNonQuery();
-                    CON1.Close();
-                    CMD.CommandType = CommandType.Text;
-                    TEMP = CMD.ExecuteNonQuery();
-                    if (TEMP > 0)
-
-                        MessageBox.Show(" REGISTRATION SUCCESSFULL");
-                    else
-                        MessageBox.Show("REGISTRATION FAILED");
-
-                    clear();
-                    next();
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Set different contact and address");
-                contact.Text = "";
-                address.Text = "";
-                contact.Focus();
-            }
+                  
+         
 
             void clear()
             {

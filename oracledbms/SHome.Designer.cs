@@ -30,11 +30,11 @@ namespace oracledbms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.LogOut = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -47,16 +47,26 @@ namespace oracledbms
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.linkLabel6);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.linkLabel5);
             this.panel1.Controls.Add(this.name);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.LogOut);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 55);
+            this.panel1.Size = new System.Drawing.Size(816, 69);
             this.panel1.TabIndex = 0;
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Location = new System.Drawing.Point(689, 44);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(98, 13);
+            this.linkLabel6.TabIndex = 6;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "Delete My Account";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // label3
             // 
@@ -66,19 +76,6 @@ namespace oracledbms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 53);
             this.label3.TabIndex = 1;
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.linkLabel5.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel5.Location = new System.Drawing.Point(627, 12);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(76, 24);
-            this.linkLabel5.TabIndex = 3;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Log Out";
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // name
             // 
@@ -101,17 +98,18 @@ namespace oracledbms
             this.label1.TabIndex = 4;
             this.label1.Text = "Welcome to shop ";
             // 
-            // LogOut
+            // linkLabel5
             // 
-            this.LogOut.ActiveLinkColor = System.Drawing.Color.MediumBlue;
-            this.LogOut.AutoSize = true;
-            this.LogOut.LinkColor = System.Drawing.Color.Red;
-            this.LogOut.Location = new System.Drawing.Point(723, 23);
-            this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(40, 13);
-            this.LogOut.TabIndex = 3;
-            this.LogOut.TabStop = true;
-            this.LogOut.Text = "Logout";
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.linkLabel5.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel5.Location = new System.Drawing.Point(712, 417);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(76, 24);
+            this.linkLabel5.TabIndex = 3;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Log Out";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -120,7 +118,7 @@ namespace oracledbms
             this.linkLabel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.linkLabel2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel2.Location = new System.Drawing.Point(349, 219);
+            this.linkLabel2.Location = new System.Drawing.Point(346, 289);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(52, 24);
             this.linkLabel2.TabIndex = 2;
@@ -135,7 +133,7 @@ namespace oracledbms
             this.linkLabel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.linkLabel4.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel4.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel4.Location = new System.Drawing.Point(302, 307);
+            this.linkLabel4.Location = new System.Drawing.Point(293, 250);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(146, 24);
             this.linkLabel4.TabIndex = 2;
@@ -165,7 +163,7 @@ namespace oracledbms
             this.linkLabel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.linkLabel3.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel3.Location = new System.Drawing.Point(331, 263);
+            this.linkLabel3.Location = new System.Drawing.Point(330, 213);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(89, 24);
             this.linkLabel3.TabIndex = 1;
@@ -179,7 +177,7 @@ namespace oracledbms
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(-6, 112);
+            this.label2.Location = new System.Drawing.Point(108, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(537, 36);
             this.label2.TabIndex = 4;
@@ -189,8 +187,9 @@ namespace oracledbms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(816, 459);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel2);
@@ -209,7 +208,6 @@ namespace oracledbms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel LogOut;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -219,5 +217,6 @@ namespace oracledbms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel linkLabel6;
     }
 }

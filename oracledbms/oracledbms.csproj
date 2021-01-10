@@ -54,28 +54,11 @@
     <Compile Include="AddRM.Designer.cs">
       <DependentUpon>AddRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="CDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CDetails.Designer.cs">
-      <DependentUpon>CDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CHome.Designer.cs">
-      <DependentUpon>CHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="CLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CLogin.Designer.cs">
       <DependentUpon>CLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="creg1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>creg.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -95,23 +78,11 @@
     <Compile Include="RMaterials.Designer.cs">
       <DependentUpon>RMaterials.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales.Designer.cs">
-      <DependentUpon>Sales.cs</DependentUpon>
-    </Compile>
     <Compile Include="SHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SHome.Designer.cs">
       <DependentUpon>SHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateRM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateRM.Designer.cs">
-      <DependentUpon>UpdateRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -154,14 +125,14 @@
     <EmbeddedResource Include="AddRM.resx">
       <DependentUpon>AddRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CHome.resx">
-      <DependentUpon>CHome.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CReg.resx">
       <DependentUpon>CReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CLogin.resx">
       <DependentUpon>CLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RMaterials.resx">
       <DependentUpon>RMaterials.cs</DependentUpon>
@@ -187,9 +158,6 @@
     <EmbeddedResource Include="SReg.resx">
       <DependentUpon>SReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateRM.resx">
-      <DependentUpon>UpdateRM.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,17 +166,6 @@
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
-    </None>
-    <None Include="creg.xsc">
-      <DependentUpon>creg.xsd</DependentUpon>
-    </None>
-    <None Include="creg.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>creg1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="creg.xss">
-      <DependentUpon>creg.xsd</DependentUpon>
     </None>
     <None Include="DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>

@@ -57,7 +57,7 @@ namespace oracledbms
                     globals.username = data.Rows[0]["username"].ToString();
 
                         this.Hide();
-                        CHome f4 = new CHome();
+                        Shops f4 = new Shops();
                         f4.ShowDialog();
                     }
 
@@ -85,6 +85,20 @@ namespace oracledbms
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CReg ss = new CReg();
+            ss.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Welcome ss = new Welcome();
+            ss.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SLogin ss = new SLogin();
             ss.Show();
             this.Hide();
         }
