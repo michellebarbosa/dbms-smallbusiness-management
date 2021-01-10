@@ -77,18 +77,9 @@ namespace oracledbms
                 }
                 else
                 {
-                    CON1.Open();
-                    QUERY = "Insert INTO materials(shopn, pname, pprice, pquantity, sellername, contact, address) Values('"+ shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')";
-                    CMD = new OracleCommand(QUERY, CON1);
-                    CMD.CommandType = CommandType.Text;
-                    TEMP = CMD.ExecuteNonQuery();
-
                  
-                    //OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO materials ( pname,pprice,pquantity,sellername,contact,address) Values('" +
-                        //shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", con);
-
-                    OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO materials ( pname,pprice,pquantity,sellername,contact,address) Values('" +
-                        shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", CON1);
+                    OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO book_table ( pname,pprice,pquantity,sellername,contact,address) Values('" +
+                        shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", con);
 
                    // adapter.ExecuteNonQuery();
                     CON1.Close();
