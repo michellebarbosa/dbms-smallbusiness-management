@@ -57,7 +57,7 @@ namespace oracledbms
                     globals.username = data.Rows[0]["username"].ToString();
 
                         this.Hide();
-                        Shops f4 = new Shops();
+                        test f4 = new test();
                         f4.ShowDialog();
                     }
 

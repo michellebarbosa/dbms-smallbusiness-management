@@ -29,7 +29,6 @@ namespace oracledbms
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -41,15 +40,9 @@ namespace oracledbms
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(209, 80);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 0;
             // 
             // textBox7
             // 
@@ -118,7 +111,7 @@ namespace oracledbms
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(254, 242);
+            this.button3.Location = new System.Drawing.Point(216, 219);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 11;
@@ -137,14 +130,24 @@ namespace oracledbms
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(164, 35);
+            this.textBox9.Location = new System.Drawing.Point(209, 84);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 20);
             this.textBox9.TabIndex = 13;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(315, 82);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(10, 18);
+            this.button4.TabIndex = 14;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Inventory
             // 
             this.ClientSize = new System.Drawing.Size(519, 447);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
@@ -156,7 +159,6 @@ namespace oracledbms
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
             this.Name = "Inventory";
             this.Load += new System.EventHandler(this.Inventory_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -181,7 +183,6 @@ namespace oracledbms
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox11;
@@ -193,5 +194,6 @@ namespace oracledbms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button button4;
     }
 }

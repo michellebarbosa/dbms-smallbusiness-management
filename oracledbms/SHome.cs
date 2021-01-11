@@ -60,7 +60,6 @@ namespace oracledbms
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
             this.Hide();
             Inventory f4 = new Inventory();
             f4.ShowDialog();

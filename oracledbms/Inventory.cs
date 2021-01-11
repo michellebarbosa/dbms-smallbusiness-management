@@ -25,6 +25,7 @@ namespace oracledbms
         public Inventory()
         {
             InitializeComponent();
+
             CON1 = new OracleConnection("Data Source=(DESCRIPTION =" +
       "(ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-5IH3S49)(PORT = 1521))" +
       "(CONNECT_DATA =" +
@@ -38,7 +39,7 @@ namespace oracledbms
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            textBox9.Text = globals.sname;
+
             string oradb = "Data Source=DESKTOP-5IH3S49 ;User Id=michelle ;Password=Ilovescience08;";
             OracleConnection conn = new OracleConnection(oradb);  // C#
             conn.Open();
@@ -81,9 +82,32 @@ namespace oracledbms
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string oradb = "Data Source=DESKTOP-5IH3S49 ;User Id=michelle ;Password=Ilovescience08;";
+            OracleConnection conn = new OracleConnection(oradb);  // C#
+            conn.Open();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            //OracleDataAdapter sda = new OracleDataAdapter("select * from sreg where sname = @sname ", conn);
+            //sda.SelectCommand.Parameters.Add("@sname", sname.Text);
+
+            string query = "SELECT * FROM inventory WHERE sname='" + textBox9.Text + "'";
+            OracleDataAdapter sda = new OracleDataAdapter(query, conn);
+
+
+            DataTable dt = new DataTable("inventory");
+
+
+
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt.DefaultView;
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            if (textBox6.Text == "" || textBox7.Text == "" || textBox8.Text == "" || textBox11.Text == "")
+            if (textBox9.Text == "" || textBox7.Text == "" || textBox8.Text == "" || textBox11.Text == "")
             {
                 MessageBox.Show("Enter All the Details ");
             }
@@ -101,7 +125,7 @@ namespace oracledbms
 
                 while (RDR.Read())
                 {
-                    if (RDR["shopn"] == textBox6.Text)
+                    if (RDR["shopn"] == textBox9.Text)
                         I = 1;
                     else
                         I = I;
@@ -118,18 +142,9 @@ namespace oracledbms
                 else
                 {
                     CON1.Open();
-                    QUERY = "Insert INTO inventory(sname, prname, prprice, prquantity) Values('" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox11.Text + "')";
+                    QUERY = "Insert INTO inventory(sname, prname, prprice, prquantity) Values('" + textBox9.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox11.Text + "')";
                     CMD = new OracleCommand(QUERY, CON1);
-                    CMD.CommandType = CommandType.Text;
-                    TEMP = CMD.ExecuteNonQuery();
-
-
-                    //OracleDataAdapter adapter = new OracleDataAdapter("Insert INTO materials ( pname,pprice,pquantity,sellername,contact,address) Values('" +
-                    //shopn.Text + "','" + pname.Text + "','" + price.Text + "','" + quantity.Text + "','" + sname.Text + "','" + contact.Text + "','" + address.Text + "')", con);
-
-
-                    // adapter.ExecuteNonQuery();
-                    
+               
                     CMD.CommandType = CommandType.Text;
                     TEMP = CMD.ExecuteNonQuery();
                     if (TEMP > 0)
@@ -147,7 +162,7 @@ namespace oracledbms
             else
             {
                 MessageBox.Show("Set different contact and address");
-                textBox6.Text = "";
+                textBox9.Text = "";
                 textBox7.Text = "";
                 textBox8.Focus();
                 textBox11.Focus();
@@ -155,7 +170,7 @@ namespace oracledbms
 
             void clear()
             {
-                textBox6.Text = textBox7.Text = textBox8.Text = textBox11.Text = " ";
+                textBox9.Text = textBox7.Text = textBox8.Text = textBox11.Text = " ";
 
             }
             void next()

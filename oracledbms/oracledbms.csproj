@@ -84,6 +84,12 @@
     <Compile Include="SHome.Designer.cs">
       <DependentUpon>SHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +107,6 @@
     </Compile>
     <Compile Include="SReg.Designer.cs">
       <DependentUpon>SReg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Shops.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shops.Designer.cs">
-      <DependentUpon>Shops.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,9 +140,6 @@
     <EmbeddedResource Include="SHome.resx">
       <DependentUpon>SHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Shops.resx">
-      <DependentUpon>Shops.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -157,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SReg.resx">
       <DependentUpon>SReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>

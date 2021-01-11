@@ -23,6 +23,7 @@ namespace oracledbms
 
         private void RMaterials_Load(object sender, EventArgs e)
         {
+            
             textBox1.Text = globals.sname;
             string oradb = "Data Source=DESKTOP-5IH3S49 ;User Id=michelle ;Password=Ilovescience08;";
             OracleConnection conn = new OracleConnection(oradb);  // C#
@@ -38,7 +39,7 @@ namespace oracledbms
 
             DataTable dt = new DataTable("materials");
 
-
+           
 
             sda.Fill(dt);
             dataGridView1.DataSource = dt.DefaultView;
