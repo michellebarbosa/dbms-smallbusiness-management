@@ -87,7 +87,7 @@ namespace oracledbms
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = "delete from materials where pname ='" + textBox3.Text + "'";
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Update successfull");
+                    MessageBox.Show("Deletion successfull");
                     dataGridView1.Update();
                     dataGridView1.Refresh();
                 }
@@ -217,6 +217,11 @@ namespace oracledbms
             this.Hide();
             SLogin f4 = new SLogin();
             f4.ShowDialog();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

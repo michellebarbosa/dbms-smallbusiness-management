@@ -33,7 +33,7 @@ namespace oracledbms
             //OracleDataAdapter sda = new OracleDataAdapter("select * from sreg where sname = @sname ", conn);
             //sda.SelectCommand.Parameters.Add("@sname", sname.Text);
 
-            string query = "SELECT * FROM inventory;";
+            string query = "SELECT* FROM inventory;";
             OracleDataAdapter sda = new OracleDataAdapter(query, conn);
 
 
